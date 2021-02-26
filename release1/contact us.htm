@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta name="description" content="Trusted Travel Advisor - Connect With Us" />
+    <meta name="keywords" content="Connect, Communicate, Talk, Engage" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <p>Connect with us! We’d love to hear from you. Let us know if you have any questions or comments regarding the information on our website, or would like further information. We’re here to assist you.<br>
+    At Trusted Travel we’re rapidly working to apply our expertise to more travel destinations. We’d love your input on countries you’re interested in having us cover.</p>
+
+    <form method="post" 	action="mailer.php">
+        <p>First Name
+        <input type= "text" name="firstname" maxlength="100" value="" /></p>
+        <p>
+        Last name
+        <input type= "text" name="lastname" maxlength="100" value="" />
+        </p>
+        <p>Avid Traveler?
+        Yes <input type="radio" name="avid traveler" value="yes" />
+        No <input type="radio" name="avid traveler" value="no" checked="checked" /></p>
+        <p>How did you find my website?
+        <select name="D1">
+        <option value="A">Google</option>
+        <option value="B">Word of Mouth</option>
+        <option value="C">Other</option>
+        </select></p>
+        <p>
+        If other please state how.
+        <input type= "text" name="lastname" maxlength="100" value="" />
+        </p>
+        <p>What's your favorite method of travel?<input type="checkbox" name="method?" value="Train" /> Train
+        <input type="checkbox" name="method?" value="Plane" /> Plane
+        <input type="checkbox" name="method?" value="Bus" /> Bus
+        <input type="checkbox" name="method?" value="Car" /> Car</p>
+        <p> What should be our next travel destination? Or, please add any comments or questions you have.<br><br>
+        <textarea name="comments" rows="8" cols="60"> </textarea></p>
+        <br>
+        <table style="width:80px;padding-left:820px;padding-bottom:100px;">
+        <tr> <td> <button type="submit" name="submit" value="submit"> Submit</button></td>
+        <td><input type="reset" value="Reset" name="Reset"/></td>
+        </tr></table>
+        </form>
+
+</body>
+</html>
