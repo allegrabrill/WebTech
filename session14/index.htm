@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 14</title>
+
+    <style>
+        button {position:absolute; top:0px; left:0px}
+    </style>
+
+    <script>
+        function but()
+        {
+            var rand1 = Math.floor(Math.random()*500);
+            var rand2 = Math.floor(Math.random()*500);
+            document.getElementById("button").style.top = rand1+"px";
+            document.getElementById("button").style.left = rand2+"px";
+            var title = new Array("Click Me","Move Me","Click Here","Button","Next");
+            var butt = document.getElementById("button");
+            butt.innerHTML=title[Math.floor(Math.random()*5)];
+        }
+
+    </script>
+</head>
+<body>
+    <button id="button" onclick="but()">Click me</button>
+</body>
+</html>
