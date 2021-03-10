@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Allegra</title>
+    <link rel="stylesheet" href="session4.css"/>
+    <style>
+        html{background-color:papayawhip;}
+        h1{font-family:Georgia, 'Times New Roman', Times, serif; font-size:32pt;} 
+        p{font-family:Georgia, 'Times New Roman', Times, serif; font-size:14pt;}
+        .selfie{border-style:double; float:inline-end;}
+        a{font-family:Georgia, 'Times New Roman', Times, serif; font-size:12pt;}
+        span{font-variant: small-caps;}
+    </style>
+
+    <script>
+        var colorList= new Array("red", "orange", "yellow", "green", "blue", "indigo", "violet");
+        var counter=0
+        function changeColor(){
+            document.getElementById("H1").style.color= colorList[counter];
+            counter=counter+1
+            if (counter == colorList.length)
+            {
+                counter=0
+            }
+            setTimeout("changeColor()",750)
+        }
+    </script>
+</head>
+<body onload="changeColor()">
+    <h1 id="H1">About Me!</h1>
+    <p><img class="selfie" src="profilepic.png" alt="Picture of Me" width="250"/></p>
+    <hr>
+    <p>I was born and raised in <b>Manhattan, New York</b>.</p><p style="font-style: italic;">Email me to best contact me!</p>
+    <hr>
+        <p>Something interesting about me is that I used to ski competitively <br> Although I no longer compete, skiing is still my <span>favorite</span> winter activity!</p>
+    <hr>
+    <a href="interests.htm">My Interests</a>
+</body>
+</html>
