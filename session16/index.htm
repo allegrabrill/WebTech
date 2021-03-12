@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Canvas In Class Activity </title> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<style>
+        h1 {text-align: center;}
+
+		canvas { 
+            border:1px solid #B0BDED;
+			width: 1000px; 
+			height: 500px; 
+			position: absolute; 
+			top: 10%; 
+			left: 13%; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+    <h1>Watch the Ball Bounce!</h1>
+		<canvas id="canvas"></canvas> 
+
+		<script> 
+			var canvas = document.getElementById("canvas"); 
+
+			canvas.width = window.innerWidth; 
+			canvas.height = window.innerHeight; 
+
+			var c = canvas.getContext('2d'); 
+
+			var x = Math.floor(Math.random() * innerWidth); 
+			var y = Math.floor(Math.random() * innerHeight); 
+			var vx = Math.floor(Math.random() * 5); 
+			var vy = Math.floor(Math.random() * 5); 
+			var radius = 20; 
+
+			bounce(); 
+			
+			function bounce() { 
+				requestAnimationFrame(bounce); 
+
+			
+				c.clearRect(0, 0, innerWidth, innerHeight); 
+
+				c.beginPath(); 
+				c.strokeStyle = "green"; 
+				c.arc(x, y, radius, 0, Math.PI * 2, false); 
+				c.stroke(); 
+
+				if (radius + x > innerWidth) 
+					vx = 0 - vx; 
+
+				if (x - radius < 0) 
+					vx = 0 - vx; 
+
+				if (y + radius > innerHeight) 
+					vy = 0 - vy; 
+
+				if (y - radius < 0) 
+					vy = 0 - vy; 
+
+				x = x + vx; 
+				y = y + vy; 
+
+			} 
+		</script> 
+</body> 
+
+</html> 
