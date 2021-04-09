@@ -1,0 +1,173 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta name="description" content="Trusted Travel Advisor - Connect With Us" />
+    <meta name="keywords" content="Connect, Communicate, Talk, Engage" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Contact Us</title>
+    <script>
+      function processForm()
+      {
+        var jstrain=document.getElementById("train")
+        var jsplane=document.getElementById("plane")
+        var jsbus=document.getElementById("bus")
+        var jscar=document.getElementById("car")
+        var jsavid=document.getElementById("avid")
+        var jsnotavid=document.getElementById("notavid")
+        if (document.getElementById("fname").value=="")
+        {
+          alert("First name is required");
+          document.getElementById("fname").focus();
+        }
+        else if (document.getElementById("lname").value=="")
+        {
+          alert("Last name is required");
+          document.getElementById("lname").focus();
+        }
+        else if
+        (jstrain.checked == false && jsplane.checked == false && jsbus.checked == false && jscar.checked == false)
+        {
+          alert("Method of travel is required");
+        }
+        else if (document.getElementById("comments").value=="")
+        {
+          alert("Please add comment.");
+          document.getElementById("comments").focus();
+        }
+        else if
+        (jsavid.checked == false && jsnotavid.checked == false)
+        {
+          alert("Please let me know if you are an avid traveler or not.");
+        }
+        else
+        {
+          return true;
+        }
+        return false;
+      }
+      function selectBGcolor()
+      {
+        var bgColors = new Array("#E4EAFC","#F3E4FC","#FCF6E4","#FCEBE4","#E5FCE4");
+        document.getElementById("bod").style.backgroundColor=bgColors[Math.floor(Math.random()*bgColors.length)];
+        setTimeout("selectBGcolor()",2000);
+      }
+    </script>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td><div class="dropdown">
+          <a href="index.htm"><h1 style="color:#253E67;">Trusted Travel Advisor</h1></a>
+        </div></td>
+          <td style="padding-left:200px;"><div class="dropdown">
+        <button class="dropbtn">Argentina</button>
+        <div class="dropdown-content">
+          <a href="argentina.htm">Argentina</a>
+          <a href="patagonia.htm">Patagonia</a>
+          <a href="arg-culture.htm">Argentine Culture</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">Japan</button>
+        <div class="dropdown-content">
+          <a href="japan.htm">Japan</a>
+          <a href="tokyo.htm">Tokyo</a>
+          <a href="fushimi.htm">Fushimi Inari Taisha Shrine</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">Egypt</button>
+        <div class="dropdown-content">
+          <a href="egypt.htm">Egypt</a>
+          <a href="kings.htm">Valley of the Kings</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">Tanzania</button>
+        <div class="dropdown-content">
+          <a href="tanzania.htm">Tanzania</a>
+          <a href="serengeti.htm">Seregenti National Park</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <div class="dropdown-content">
+            <a href="aboutus.htm">About Us</a>
+          </div>
+      </div></td>
+        </tr>
+      </table>
+
+    <h1 id="button" style="text-align: center;">Contact Us</h1>
+    <div id="bod" onclick="selectBGcolor()">
+    <p> &emsp;&ensp;Connect with us! We’d love to hear from you. Let us know if you have any questions or comments regarding the information on our website, or would like further information. We’re here to assist you.<br>
+      &emsp;&ensp;At Trusted Travel we’re rapidly working to apply our expertise to more travel destinations. We’d love your input on countries you’re interested in having us cover. Make our hotline bling!</p>
+
+  <img style="position:absolute;padding-left: 20px;" id="div" src="callme.png" alt="contactme">
+
+    <form method="post" action="mailer.php" id="form1" onsubmit="return processForm()">
+        <p style="text-align: center;">First Name
+        <input type= "text" name="firstname" maxlength="100" value="" id="fname"/></p>
+        <p style="text-align: center;">
+        Last name
+        <input type= "text" name="lastname" maxlength="100" value="" id="lname"/>
+        </p>
+        <p style="text-align: center;">Avid Traveler?
+        Yes <input  id="avid" type="radio" name="avid traveler" value="yes" />
+        No <input  id="notavid" type="radio" name="avid traveler" value="no" checked="checked" /></p>
+        <p style="text-align: center;">How did you find my website?
+        <select name="D1">
+        <option value="A">Google</option>
+        <option value="B">Word of Mouth</option>
+        <option value="C">Other</option>
+        </select></p>
+        <p style="text-align: center;">What's your favorite method of travel?<input id="train" type="checkbox" name="method?" value="Train" /> Train
+        <input id="plane" type="checkbox" name="method?" value="Plane" /> Plane
+        <input id="bus" type="checkbox" name="method?" value="Bus" /> Bus
+        <input id="car" type="checkbox" name="method?" value="Car" /> Car</p>
+        <p style="text-align: center;"> What should be our next travel destination? Or, please add any comments or questions you have.<br><br>
+        <textarea name="comments" rows="8" cols="60"> </textarea></p>
+        <br><div style="text-align: center;">
+        <table style="width:80px;padding-left:850px;padding-bottom:100px;">
+        <tr> <td> <button type="submit" name="submit" value="submit"> Submit</button></td>
+        <td><input type="reset" value="Reset" name="Reset"/></td>
+        </tr></table></div>
+        </form>
+      </div>
+
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script> 
+    $(document).ready(function(){
+      $("#button").click(function(){
+        $("#div").animate({
+          height: 'toggle'
+        });
+      });
+    });
+  </script>
+
+        <footer class="footer-distributed">
+            <div class="footer-left">
+            <h1>Trusted Travel Advisor</h1>
+                <p class="footer-links">
+                <a href="aboutus.htm">About Us</a>
+                    ·
+                <a href="contactus.htm">Contact Us</a>
+                     ·   
+                <a href="credits.htm">Credits</a>
+            </p>
+            </div>
+        
+            <div class="footer-center"></div>
+            <div class="footer-right">
+            <p class="footer-company-about">
+            <span>About the company</span>
+                Trusted Travel Advisor provides travel recommendations based on first hand experience.
+            </p>
+            </div>
+            </footer>
+</body>
+</html>

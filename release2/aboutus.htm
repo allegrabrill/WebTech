@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta name="description" content="Trusted Travel Advisor - Who We Are" />
+    <meta name="keywords" content="Information, About Us, About Trusted Travel" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>About Us</title>
+    <style>
+      #plane {
+        position: relative;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><div class="dropdown">
+          <a href="index.htm"><h1 style="color:#253E67;">Trusted Travel Advisor</h1></a>
+        </div></td>
+          <td style="padding-left:200px;"><div class="dropdown">
+        <button class="dropbtn">Argentina</button>
+        <div class="dropdown-content">
+          <a href="argentina.htm">Argentina</a>
+          <a href="patagonia.htm">Patagonia</a>
+          <a href="arg-culture.htm">Argentine Culture</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">Japan</button>
+        <div class="dropdown-content">
+          <a href="japan.htm">Japan</a>
+          <a href="tokyo.htm">Tokyo</a>
+          <a href="fushimi.htm">Fushimi Inari Taisha Shrine</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">Egypt</button>
+        <div class="dropdown-content">
+          <a href="egypt.htm">Egypt</a>
+          <a href="kings.htm">Valley of the Kings</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">Tanzania</button>
+        <div class="dropdown-content">
+          <a href="tanzania.htm">Tanzania</a>
+          <a href="serengeti.htm">Seregenti National Park</a>
+        </div>
+      </div></td>
+          <td><div class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <div class="dropdown-content">
+            <a href="aboutus.htm">About Us</a>
+          </div>
+      </div></td>
+        </tr>
+      </table>
+      
+    <h1 style="text-align: center;">About Us</h1>   
+
+    <p>&emsp;&ensp;Company’s mission statement: The founder and CEO of Trusted Travel started Trusted Travel Advisor in early 2021 to share her love of travel and exploration with users for free. But it is her belief that in addition to gaining traveling tips, users of Trusted Travel learn about the country beforehand making them educated tourists; equipped to make the most of their trip, and unlikely to insult the traditions or customs of the native people of the country they’re visiting. Learning about a country before visiting only enhances the travel experience.</p>
+    <p>&emsp;&ensp;What sets us apart from other travel agencies is that all of our recommendations are based on first-hand experience. Our experts can tell clients whether certain excursions are worth the price or just tourist traps.</p> 
+    <p>&emsp;&ensp;Currently, our company offers advice on four different countries: Argentina, Japan, Egypt, and Tanzania. Collectively, the team has explored over 65 countries, and is looking forward to adding the same caliber of information about additional countries within the year &ndash; just in time, as more countries reopen for tourism again following the COVID-19 suspension.</p>
+    <p>&emsp;&ensp;On behalf of the Trusted Travel family, we would like to thank you for taking a look at us. <span id="demo">Bon Voyage!</span></p>
+
+    <h3 id="btn1">Are you ready for your trip?</h3>
+    <p id="1" style="display:none;">&emsp;&ensp;Do you have your passport?</p>
+    <p id="2" style="display:none;">&emsp;&ensp;Have you gotten necessary vaccines?</p>
+    <p id="3" style="display:none;">&emsp;&ensp;Did you pack extra face masks?</p>
+    
+
+    <img onclick="myFunction()" style="width:200px; padding-bottom: 350px;" id="plane" alt="plane" src="https://i.pinimg.com/originals/b0/d5/97/b0d59733d5541b8ecbf628f84fbb863e.png">
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+        <h1>Trusted Travel Advisor</h1>
+            <p class="footer-links">
+            <a href="aboutus.htm">About Us</a>
+                ·
+            <a href="contactus.htm">Contact Us</a>
+                 ·   
+            <a href="credits.htm">Credits</a>
+        </p>
+        </div>
+    
+        <div class="footer-center"></div>
+        <div class="footer-right">
+        <p class="footer-company-about">
+        <span>About the company</span>
+            Trusted Travel Advisor provides travel recommendations based on first hand experience.
+        </p>
+        </div>
+        </footer>
+
+        <script>
+          plane.onload = function() {
+            let start = Date.now();
+            let timer = setInterval(function() {
+            let timePassed = Date.now() - start;
+              plane.style.left = timePassed / 2 + 'px';
+              if (timePassed > 2000) clearInterval(timer);
+            }, 20);
+          }
+          function myFunction() {
+            document.getElementById("demo").style.fontWeight = "bold";
+            document.getElementById("demo").style.fontFamily = "lust script display";
+            document.getElementById("demo").style.color = "#0e0757";
+          }
+        </script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#1").fadeIn();
+    $("#2").fadeIn("slow");
+    $("#3").fadeIn(3000);
+  });
+});
+  </script>
+
+</body>
+</html>
