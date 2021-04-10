@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+  <link href="jquery-ui.css" rel="stylesheet">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Form!</title>
+
+	<style type="text/css">
+	/* Your styles go here */
+	body {width:50%; margin:auto}
+	h1, h2 {text-align:center}
+	.ar {text-align:right}
+	</style>
+
+  <script src="external/jquery/jquery.js"></script>
+	<script type="text/javascript">
+	/* Your JavaScript goes here */
+	</script>
+  <script src="jquery-ui.js">
+  </script>
+
+  </head>
+
+<body>
+<h1>Zoom University Review</h1>
+<h2>Please provide a review about Zoom University. </h2>
+<form action="mailto:abrill1@babson.edu" method="post" enctype="text/plain">
+<div id="tabs">
+  <ul>
+  <li><a href="#fragment-1">Contact Information</a></li>
+  <li><a href="#fragment-2">Your Review</a></li>
+  <li><a href="#fragment-3">Submission</a></li>
+</ul>
+  <div id="fragment-1">
+
+<fieldset>
+<table style="margin-left:50px">
+<tr><td class="ar">Your Name: </td><td><input type="text" name="YourName" size="30" /></td></tr>
+<tr><td class="ar">EMail Address: </td><td><input type="text" name="email" size="30"/></td></tr>
+<tr><td  class="ar">Phone: </td><td><input type="text" name="phone" size="30" /></td></tr>
+<tr><td>Perferred contact: </td><td style="padding-left:30px">EMail <input type="radio" name="pcontact" value="e"/> Phone
+	<input type="radio" name="pcontact" value="p" /></td></tr>
+</table>
+</fieldset>
+</div>
+  <div id="fragment-2">
+
+<p>Date: <input type="text" id="datepicker"></p>
+<p>
+How satisfied were you with earning your degree through zoom classes?
+<select name="satisfaction">
+	<option value="vs">Very Satisfied</option>
+	<option value="s">Satisfied</option>
+	<option value="n">Neither Satisfied nor Dissatisfied</option>
+	<option value="d">Dissatisfied</option>
+	<option value="vd">Very Dissatisfied</option>
+</select></p>
+<p>Please provide an explaination for your review:</p>
+<p><textarea name="comments" rows="5" cols="60"></textarea></p>
+<p>Where is your favorite place to take class?
+<br />
+The Kitchen <input type="checkbox" name="where" value="kitchen"/> The Dining Room <input type="checkbox" name="where" value="dr" />
+The Living Room <input type="checkbox" name="where" value="lr" /> The Office <input type="checkbox" name="where" value="office" />
+Other <input type="checkbox" name="where" value="office" />
+</p>
+</div>
+
+  <div id="fragment-3">
+
+<p style="text-align:center"><input type="submit" name="Submit" value="Submit" />&nbsp;&nbsp;&nbsp;<input type="reset" name="Reset" value="Reset" /></p>
+</div>
+</form>
+
+<script>
+
+$( "#accordion" ).accordion();
+
+$( "#tabs" ).tabs();
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+</body>
+</html>
